@@ -1,0 +1,505 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "solids",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "hardness",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "pH",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "sulfate",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "chloramines",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "organicCarbon",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "trihalomethanes",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "conductivity",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "potability",
+						"type": "int256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "additionalNotes",
+						"type": "string"
+					}
+				],
+				"name": "DataRecorded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "PaymentReceived",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "areaData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "solids",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "hardness",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sulfate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "chloramines",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "organicCarbon",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "trihalomethanes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "conductivity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "potability",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "additionalNotes",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					}
+				],
+				"name": "getDataByArea",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "area",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "solids",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "hardness",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pH",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "sulfate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chloramines",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "organicCarbon",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "trihalomethanes",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "conductivity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "potability",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "additionalNotes",
+								"type": "string"
+							}
+						],
+						"internalType": "struct WaterQuality.WaterQualityData[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					}
+				],
+				"name": "getLatestDataByArea",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "area",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "solids",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "hardness",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "pH",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "sulfate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "chloramines",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "organicCarbon",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "trihalomethanes",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "conductivity",
+								"type": "uint256"
+							},
+							{
+								"internalType": "int256",
+								"name": "potability",
+								"type": "int256"
+							},
+							{
+								"internalType": "string",
+								"name": "additionalNotes",
+								"type": "string"
+							}
+						],
+						"internalType": "struct WaterQuality.WaterQualityData",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "solids",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "hardness",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sulfate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "chloramines",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "organicCarbon",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "trihalomethanes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "conductivity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "potability",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "additionalNotes",
+						"type": "string"
+					}
+				],
+				"name": "recordData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "area",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "solids",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "hardness",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pH",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sulfate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "chloramines",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "organicCarbon",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "trihalomethanes",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "conductivity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "int256",
+						"name": "potability",
+						"type": "int256"
+					},
+					{
+						"internalType": "string",
+						"name": "additionalNotes",
+						"type": "string"
+					}
+				],
+				"name": "recordDataWithPayment",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/waterquality.sol": "WaterQuality"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/waterquality.sol": {
+			"keccak256": "0x9958a15a90b4b3dda70a92bd48281225366098af4561242aae205a1f3e6aa04a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d20858c42f121c6206a935b30be57db7341770944a72f13c829a42534c24b4a2",
+				"dweb:/ipfs/QmXp6R9jgqMQj8smyRtXddfcqnFSHQGA9NMwLze4UG23er"
+			]
+		}
+	},
+	"version": 1
+}
